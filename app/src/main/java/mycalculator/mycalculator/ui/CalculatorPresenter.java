@@ -8,7 +8,7 @@ import mycalculator.mycalculator.R;
 
 public class CalculatorPresenter implements MainContract.Presenter {
 
-    private final CalculatorViewResult viewResult;
+    private final MainContract.View viewResult;
 
     private final Context context;
 
@@ -29,7 +29,7 @@ public class CalculatorPresenter implements MainContract.Presenter {
     private boolean isCommandPressed = false;
 
 
-    public CalculatorPresenter(CalculatorViewResult viewResult, Context context, MainContract.Calculator calculator) {
+    public CalculatorPresenter(MainContract.View viewResult, Context context, MainContract.Calculator calculator) {
         this.viewResult = viewResult;
         this.context = context;
         this.calculator = calculator;

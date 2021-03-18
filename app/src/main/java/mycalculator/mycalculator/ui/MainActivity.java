@@ -15,7 +15,7 @@ import mycalculator.mycalculator.domain.Operation;
 
 public class MainActivity extends AppCompatActivity implements MainContract.View{
 
-    private final CalculatorPresenter calculatorPresenter = new CalculatorPresenter(new CalculatorViewResult(), this, new CalculatorImpl());
+    private final CalculatorPresenter calculatorPresenter = new CalculatorPresenter(this, this, new CalculatorImpl());
     private TextView result;
 
     @Override
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         numeralMap.put(R.id.button_0, 0);
 
         Map<Integer, Operation> operationMap = new HashMap<>();
-        operationMap.put(R.id.button_DIV, Operation.DIV);
-        operationMap.put(R.id.button_ADD, Operation.ADD);
-        operationMap.put(R.id.button_MULT, Operation.MULT);
-        operationMap.put(R.id.button_SUB, Operation.SUB);
+        operationMap.put(R.id.button_div, Operation.DIV);
+        operationMap.put(R.id.button_add, Operation.ADD);
+        operationMap.put(R.id.button_mult, Operation.MULT);
+        operationMap.put(R.id.button_sub, Operation.SUB);
 
         View.OnClickListener numeralClickListener = new View.OnClickListener() {
             @Override
@@ -83,10 +83,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         findViewById(R.id.button_8).setOnClickListener(numeralClickListener);
         findViewById(R.id.button_9).setOnClickListener(numeralClickListener);
 
-        findViewById(R.id.button_ADD).setOnClickListener(operationClickListener);
-        findViewById(R.id.button_DIV).setOnClickListener(operationClickListener);
-        findViewById(R.id.button_SUB).setOnClickListener(operationClickListener);
-        findViewById(R.id.button_MULT).setOnClickListener(operationClickListener);
+        findViewById(R.id.button_add).setOnClickListener(operationClickListener);
+        findViewById(R.id.button_div).setOnClickListener(operationClickListener);
+        findViewById(R.id.button_sub).setOnClickListener(operationClickListener);
+        findViewById(R.id.button_mult).setOnClickListener(operationClickListener);
 
         findViewById(R.id.button_DOT).setOnClickListener(dotClickListener);
 

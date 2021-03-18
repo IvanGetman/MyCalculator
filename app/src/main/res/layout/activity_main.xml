@@ -6,7 +6,7 @@
     android:columnCount="4"
     android:orientation="horizontal">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/result"
         android:layout_columnSpan="4"
         android:layout_gravity="fill"
@@ -22,12 +22,12 @@
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_DIV"
+        android:id="@+id/button_div"
         style="@style/CustomButton"
         android:text="@string/_2" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_MULT"
+        android:id="@+id/button_mult"
         style="@style/CustomButton"
         android:text="@string/_3" />
 
@@ -52,7 +52,7 @@
         android:text="@string/_7" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_SUB"
+        android:id="@+id/button_sub"
         style="@style/CustomButton"
         android:text="@string/_8" />
 
@@ -72,7 +72,7 @@
         android:text="@string/_11" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_ADD"
+        android:id="@+id/button_add"
         style="@style/CustomButton"
         android:text="@string/_12" />
 
