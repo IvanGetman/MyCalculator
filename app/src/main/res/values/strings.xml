@@ -18,4 +18,5 @@
     <string name="_16">=</string>
     <string name="_17">0</string>
     <string name="_18">,</string>
+    <string name="res">%f</string>
 </resources>

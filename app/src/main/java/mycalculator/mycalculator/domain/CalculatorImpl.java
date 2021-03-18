@@ -1,6 +1,6 @@
 package mycalculator.mycalculator.domain;
 
-public class CalculatorImpl implements Calculator {
+public class CalculatorImpl implements MainContract.Calculator {
 
     @Override
     public double binaryOperation(double argumentOne, double argumentTwo, Operation operation) {
