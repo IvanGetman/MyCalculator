@@ -19,4 +19,6 @@
     <string name="_17">0</string>
     <string name="_18">,</string>
     <string name="res">%f</string>
+    <string name="themes_light">Светлая тема</string>
+    <string name="themes_dark">Темная тема</string>
 </resources>

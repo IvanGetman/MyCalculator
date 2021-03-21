@@ -4,16 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.google.android.material.radiobutton.MaterialRadioButton;
+
 import java.util.HashMap;
 import java.util.Map;
+
 import mycalculator.mycalculator.R;
 import mycalculator.mycalculator.domain.CalculatorImpl;
 import mycalculator.mycalculator.domain.MainContract;
 import mycalculator.mycalculator.domain.Operation;
 
 
-public class MainActivity extends AppCompatActivity implements MainContract.View{
+public class MainActivity extends BaseActivity implements MainContract.View {
 
     private final CalculatorPresenter calculatorPresenter = new CalculatorPresenter(this, this, new CalculatorImpl());
     private TextView result;
@@ -110,10 +115,25 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
         findViewById(R.id.button_DEL).setOnClickListener(delClickListener);
 
+        initRadioButton(findViewById(R.id.radioButtonLight), ThemeLight);
+        initRadioButton(findViewById(R.id.radioButtonDark), ThemeDark);
+
+        RadioGroup rg = findViewById(R.id.radioButtons);
+        ((MaterialRadioButton) rg.getChildAt(getCodeStyle(ThemeLight))).setChecked(true);
     }
 
     @Override
     public void showResult(String s) {
         result.setText(s);
+    }
+
+    private void initRadioButton(View button, final int codeStyle) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setAppTheme(codeStyle);
+                recreate();
+            }
+        });
     }
 }

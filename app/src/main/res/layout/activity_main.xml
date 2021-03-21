@@ -108,5 +108,28 @@
         android:layout_column="2"
         android:text="@string/_18" />
 
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+
+            android:id="@+id/radioButtonLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/themes_light"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/themes_dark"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
 
 </GridLayout>
