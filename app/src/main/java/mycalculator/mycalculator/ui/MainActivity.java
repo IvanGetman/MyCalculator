@@ -72,6 +72,20 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
             }
         };
 
+        View.OnClickListener clrClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculatorPresenter.clrWasClicked();
+            }
+        };
+
+        View.OnClickListener delClickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculatorPresenter.delWasClicked();
+            }
+        };
+
         findViewById(R.id.button_0).setOnClickListener(numeralClickListener);
         findViewById(R.id.button_1).setOnClickListener(numeralClickListener);
         findViewById(R.id.button_2).setOnClickListener(numeralClickListener);
@@ -91,6 +105,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         findViewById(R.id.button_DOT).setOnClickListener(dotClickListener);
 
         findViewById(R.id.button_EQUALL).setOnClickListener(equalClickListener);
+
+        findViewById(R.id.button_CLR).setOnClickListener(clrClickListener);
+
+        findViewById(R.id.button_DEL).setOnClickListener(delClickListener);
 
     }
 
