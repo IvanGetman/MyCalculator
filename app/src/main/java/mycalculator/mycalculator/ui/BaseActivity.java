@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import mycalculator.mycalculator.R;
 
 public abstract class BaseActivity extends AppCompatActivity {
+    //только статик финал капсом
     protected static final String APP_THEME = "APP_THEME";
     protected static final String NAME_SHARED_PREFERENCE = "LOGIN";
     protected final int themeLight = 0;
