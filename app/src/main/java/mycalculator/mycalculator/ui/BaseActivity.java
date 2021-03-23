@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import mycalculator.mycalculator.R;
 
 public abstract class BaseActivity extends AppCompatActivity {
-    protected static final String AppTheme = "APP_THEME";
-    protected static final String NameSharedPreference = "LOGIN";
-    protected final int ThemeLight = 0;
-    protected final int ThemeDark = 1;
+    protected static final String APP_THEME = "APP_THEME";
+    protected static final String NAME_SHARED_PREFERENCE = "LOGIN";
+    protected final int THEME_LIGHT = 0;
+    protected final int THEME_DARK = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,20 +24,20 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     protected int getCodeStyle(int codeStyle) {
-        SharedPreferences sharedPref = getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
-        return sharedPref.getInt(AppTheme, codeStyle);
+        SharedPreferences sharedPref = getSharedPreferences(NAME_SHARED_PREFERENCE, MODE_PRIVATE);
+        return sharedPref.getInt(APP_THEME, codeStyle);
     }
 
     protected void setAppTheme(int codeStyle) {
-        SharedPreferences sharedPref = getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
+        SharedPreferences sharedPref = getSharedPreferences(NAME_SHARED_PREFERENCE, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt(AppTheme, codeStyle);
+        editor.putInt(APP_THEME, codeStyle);
         editor.apply();
     }
 
     private int codeStyleToStyleId(int codeStyle) {
         switch (codeStyle) {
-            case ThemeDark:
+            case THEME_DARK:
                 return R.style.MyCalculatorStyleDark;
             default:
                 return R.style.MyCalculatorStyle;

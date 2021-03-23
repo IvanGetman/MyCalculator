@@ -13,7 +13,7 @@
         android:layout_gravity="fill" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_CLR"
+        android:id="@+id/button_clr"
         style="@style/CustomButton.2"
         android:text="@string/_1" />
 
@@ -29,7 +29,7 @@
         android:text="@string/_3" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_DEL"
+        android:id="@+id/button_del"
         style="@style/CustomButton.2"
         android:text="@string/_4" />
 
@@ -89,7 +89,7 @@
         android:text="@string/_15" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_EQUALL"
+        android:id="@+id/button_equall"
         style="@style/CustomButton.2"
         android:layout_rowSpan="2"
         android:layout_gravity="fill"
@@ -103,7 +103,7 @@
         android:text="@string/_17" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_DOT"
+        android:id="@+id/button_dot"
         style="@style/CustomButton"
         android:layout_column="2"
         android:text="@string/_18" />

@@ -1,7 +1,5 @@
 package mycalculator.mycalculator.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
@@ -107,19 +105,19 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         findViewById(R.id.button_sub).setOnClickListener(operationClickListener);
         findViewById(R.id.button_mult).setOnClickListener(operationClickListener);
 
-        findViewById(R.id.button_DOT).setOnClickListener(dotClickListener);
+        findViewById(R.id.button_dot).setOnClickListener(dotClickListener);
 
-        findViewById(R.id.button_EQUALL).setOnClickListener(equalClickListener);
+        findViewById(R.id.button_equall).setOnClickListener(equalClickListener);
 
-        findViewById(R.id.button_CLR).setOnClickListener(clrClickListener);
+        findViewById(R.id.button_clr).setOnClickListener(clrClickListener);
 
-        findViewById(R.id.button_DEL).setOnClickListener(delClickListener);
+        findViewById(R.id.button_del).setOnClickListener(delClickListener);
 
-        initRadioButton(findViewById(R.id.radioButtonLight), ThemeLight);
-        initRadioButton(findViewById(R.id.radioButtonDark), ThemeDark);
+        initRadioButton(findViewById(R.id.radioButtonLight), THEME_LIGHT);
+        initRadioButton(findViewById(R.id.radioButtonDark), THEME_DARK);
 
         RadioGroup rg = findViewById(R.id.radioButtons);
-        ((MaterialRadioButton) rg.getChildAt(getCodeStyle(ThemeLight))).setChecked(true);
+        ((MaterialRadioButton) rg.getChildAt(getCodeStyle(THEME_LIGHT))).setChecked(true);
     }
 
     @Override
