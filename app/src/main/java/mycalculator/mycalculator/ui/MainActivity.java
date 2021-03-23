@@ -113,11 +113,11 @@ public class MainActivity extends BaseActivity implements MainContract.View {
 
         findViewById(R.id.button_del).setOnClickListener(delClickListener);
 
-        initRadioButton(findViewById(R.id.radioButtonLight), THEME_LIGHT);
-        initRadioButton(findViewById(R.id.radioButtonDark), THEME_DARK);
+        initRadioButton(findViewById(R.id.radioButtonLight), themeLight);
+        initRadioButton(findViewById(R.id.radioButtonDark), themeDark);
 
         RadioGroup rg = findViewById(R.id.radioButtons);
-        ((MaterialRadioButton) rg.getChildAt(getCodeStyle(THEME_LIGHT))).setChecked(true);
+        ((MaterialRadioButton) rg.getChildAt(getCodeStyle(themeLight))).setChecked(true);
     }
 
     @Override

@@ -10,8 +10,8 @@ import mycalculator.mycalculator.R;
 public abstract class BaseActivity extends AppCompatActivity {
     protected static final String APP_THEME = "APP_THEME";
     protected static final String NAME_SHARED_PREFERENCE = "LOGIN";
-    protected final int THEME_LIGHT = 0;
-    protected final int THEME_DARK = 1;
+    protected final int themeLight = 0;
+    protected final int themeDark = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private int codeStyleToStyleId(int codeStyle) {
         switch (codeStyle) {
-            case THEME_DARK:
+            case themeDark:
                 return R.style.MyCalculatorStyleDark;
             default:
                 return R.style.MyCalculatorStyle;
