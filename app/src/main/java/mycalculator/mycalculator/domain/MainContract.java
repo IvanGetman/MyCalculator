@@ -14,6 +14,10 @@ public interface MainContract {
         void dotWasClicked();
 
         void equallyWasClicked();
+
+        void clrWasClicked();
+
+        void delWasClicked();
     }
 
     interface View {

@@ -6,33 +6,30 @@
     android:columnCount="4"
     android:orientation="horizontal">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/result"
+        style="@style/CustomField"
         android:layout_columnSpan="4"
-        android:layout_gravity="fill"
-        android:textSize="25sp"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:background="@color/gray"
-        android:minHeight="88dp" />
+        android:layout_gravity="fill" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_CLR"
+        android:id="@+id/button_clr"
         style="@style/CustomButton.2"
         android:text="@string/_1" />
 
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_DIV"
+        android:id="@+id/button_div"
         style="@style/CustomButton"
         android:text="@string/_2" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_MULT"
+        android:id="@+id/button_mult"
         style="@style/CustomButton"
         android:text="@string/_3" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_DEL"
+        android:id="@+id/button_del"
         style="@style/CustomButton.2"
         android:text="@string/_4" />
 
@@ -52,7 +49,7 @@
         android:text="@string/_7" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_SUB"
+        android:id="@+id/button_sub"
         style="@style/CustomButton"
         android:text="@string/_8" />
 
@@ -72,7 +69,7 @@
         android:text="@string/_11" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_ADD"
+        android:id="@+id/button_add"
         style="@style/CustomButton"
         android:text="@string/_12" />
 
@@ -92,7 +89,7 @@
         android:text="@string/_15" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_EQUALL"
+        android:id="@+id/button_equall"
         style="@style/CustomButton.2"
         android:layout_rowSpan="2"
         android:layout_gravity="fill"
@@ -106,10 +103,33 @@
         android:text="@string/_17" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_DOT"
+        android:id="@+id/button_dot"
         style="@style/CustomButton"
         android:layout_column="2"
         android:text="@string/_18" />
+
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+
+            android:id="@+id/radioButtonLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/themes_light"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/themes_dark"
+            android:textColor="@color/white" />
+    </RadioGroup>
 
 
 </GridLayout>
